@@ -44,3 +44,62 @@ while i <= input_number:
     if (input_number % i == 0):
         print(i)
     i = i + 1
+
+# Write a program that shows whether or not the natural number input by the user is a prime number.
+# Write you code below
+input_number = int(input("Enter a number? "))
+
+count_of_divisors = 0
+for i in range(1, input_number + 1):
+    if input_number % i == 0:
+        count_of_divisors = count_of_divisors + 1
+
+if count_of_divisors == 2:
+    print(input_number, "is a prime number")
+else:
+    print(input_number, "is not a prime number")
+
+# Sometimes, a loop doesn’t have a fixed number of repetitions. Instead, an indicator value stops the loop. This special value is called the sentinel value. For example, we don’t know how much data is in a file without reading it all.
+# Write a program that shows the terms of the geometric sequence1,3,9... that stops before the value exceeds 1000
+# Write your code here
+i = 1
+while i < 1000:
+    print(i)
+    i = i * 3
+
+# The average is calculated by dividing the sum of the values by their number. Write a program that calculates the average of the numbers provided by the user. The program should stop and display the result when the user inputs 0.
+# Write your code here
+a = 1
+sum = 0
+count_value = 0
+while a!=0:
+    a = int(input("Enter a value: "))
+    sum = sum + a
+    count_value = count_value + 1
+print("Average input is: ", sum/(count_value-1))
+
+
+# Write your code here
+first_number = int(input("Enter a number: "))
+second_number = int(input("Enter another number: "))
+HCF = 1
+
+# Write a program that inputs two natural numbers from the user and displays their GCD, also known as the highest common factor (HCF).
+i = 1
+while i <= max(first_number, second_number):
+    if (first_number % i == 0) and (second_number % i == 0):
+        # print(i)
+        HCF = i
+    i = i + 1
+print("The greatest common divisor is: ", HCF)
+
+
+# better solution
+a = int (input ("Enter number 1 :"))
+b = int (input ("Enter number 2 :"))
+while b != 0:
+    r = a % b
+    a = b
+    b = r
+
+print ("The greatest common divisor is:",a)
