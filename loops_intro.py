@@ -59,6 +59,8 @@ if count_of_divisors == 2:
 else:
     print(input_number, "is not a prime number")
 
+# ---------------------------WHILE LOOPS-------------------------------------
+
 # Sometimes, a loop doesn’t have a fixed number of repetitions. Instead, an indicator value stops the loop. This special value is called the sentinel value. For example, we don’t know how much data is in a file without reading it all.
 # Write a program that shows the terms of the geometric sequence1,3,9... that stops before the value exceeds 1000
 # Write your code here
@@ -103,3 +105,57 @@ while b != 0:
     b = r
 
 print ("The greatest common divisor is:",a)
+
+# ---------------------------NESTED LOOPS-------------------------------------
+
+#  The "\t" tab, which includes multiple spaces. We can use " " to show only one space.
+
+# Write a program that shows the ordered pairs"
+# ( 1 , 1 )   ( 1 , 2 )   ( 1 , 3 )   ( 1 , 4 )   ( 1 , 5 )
+# ( 2 , 1 )   ( 2 , 2 )   ( 2 , 3 )   ( 2 , 4 )   ( 2 , 5 )
+# ( 3 , 1 )   ( 3 , 2 )   ( 3 , 3 )   ( 3 , 4 )   ( 3 , 5 )
+# ( 4 , 1 )   ( 4 , 2 )   ( 4 , 3 )   ( 4 , 4 )   ( 4 , 5 )
+# ( 5 , 1 )   ( 5 , 2 )   ( 5 , 3 )   ( 5 , 4 )   ( 5 , 5 )
+# Write your code below
+for i in range(1,6):
+    for e in range(1,6):
+        print("(", i, ",", e, ")",end = "\t")
+    print() # The print statement of the outer loop displays nothing but moves to the next line of the output.
+
+# Write your code here
+input_val = int(input("Enter a number: "))
+
+
+# Write a program that shows a square shape built with asterisks. The number of asterisks on the side of the square is input by the user.
+for i in range(1, input_val+1):
+    for i in range(1, input_val+1):
+        print("*", end="")
+    print()
+# Write a program that shows a rectanglular shape built with asterisks. The height and width of the rectangle are input by the user.
+# Write your code here
+first_value = int(input("Enter first val: "))
+second_value = int(input("Enter second value: "))
+
+for i in range(first_value):
+    for i in range(second_value):
+        print("*", end="")
+    print()
+
+# Write a program that shows a right triangle built with asterisks. The side length of the right triangle is input by the user.
+# Write your code here
+a = int(input("Enter a number: "))
+for i in range(a + 1):
+    print("*" * i)
+
+
+# Write a program that displays a hollow square built with asterisks. The length of each side of the hollow square shape is input by the user.
+# Write your code here
+a = int(input("Enter a number: "))
+for x in range(a):
+    for y in range(a):
+        if (x==0 or x==a-1 or y==0 or y==a-1):
+            print("*", end="")
+        else:
+            print(" ", end="")
+
+    print()
