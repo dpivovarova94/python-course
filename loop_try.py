@@ -21,8 +21,12 @@
 # print (string_input[-8])
 # print (string_input[-9])
 
-inputString = input("Enter something: ")
-if inputString[0] == inputString [ -1] and inputString[1] == inputString[-2]:
-    print("Palindrome")
-else:
-    print("Not Palindrome")
+# inputString = input("Enter something: ")
+# if inputString[0] == inputString [ -1] and inputString[1] == inputString[-2]:
+#     print("Palindrome")
+# else:
+#     print("Not Palindrome")
+
+v = ['a','e','i','o','u','w','h','y']
+newList = [v[-1], v[-2], v[-3], v[-4], v[-5], v[-6], v[-7], v[-8]]
+print(newList)
