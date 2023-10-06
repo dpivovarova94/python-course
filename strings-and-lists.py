@@ -87,3 +87,28 @@ if fibFlag == 0:
     print ("It's not a Fibonacci sequence due to the value", fib[count-1], "at index", count-1)
 else:
     print ("Hurrah ... we've got a Fibonacci sequence.")
+
+
+# Write a program to show the sum of each row of the matrix. The matrix must have two rows and three columns.
+
+# Write your code here
+matrix = [[10,20,30],[40,50,60]]
+print(matrix)
+
+row1 = matrix[0][0] + matrix[0][1] + matrix[0][2]
+row2 = matrix[1][0] + matrix[1][1] + matrix[1][2]
+print("Sum of Row1: ", row1)
+print("Sum of Row2: ", row2)
+
+# Write a program to show a matrix in the form of rows and columns, then show the sum of each column. The matrix must have five rows and ten columns.
+# Write your code here
+rows = 5
+cols = 10
+myList= [[0,1,2,3,4,5,6,7,8,9],[10,11,12,13,14,15,16,17,18,19],[20,21,22,23,24,25,26,27,28,29],[30,31,32,33,34,35,36,37,38,39],[40,41,42,43,44,45,46,47,48,49]]
+colsum = [0]*cols # Creating a new list of zeros of size 10
+
+for i in range(rows):
+    for j in range(cols):
+        colsum[j] = colsum[j] + myList[i][j]
+
+print(colsum)
