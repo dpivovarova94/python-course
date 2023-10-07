@@ -27,6 +27,34 @@
 # else:
 #     print("Not Palindrome")
 
-v = ['a','e','i','o','u','w','h','y']
-newList = [v[-1], v[-2], v[-3], v[-4], v[-5], v[-6], v[-7], v[-8]]
-print(newList)
+# v = ['a','e','i','o','u','w','h','y']
+# newList = [v[-1], v[-2], v[-3], v[-4], v[-5], v[-6], v[-7], v[-8]]
+# print(newList)
+# a = ['a','b','c','d','e','f','g','h','i']
+# i = 1
+# while (i < len(a)):
+#    print(a[-i], end=' ')
+#    i += 2
+
+# Assume that the following variable is already defined:
+# list1 = [5,8,11,13,17]
+list1 = [2,4,10]
+# You are required to use the above variables to find
+# the index of the first outlier in the list.
+# You may start your code from here to store the correct result in
+# the variable idx
+idx = 1
+flag = 0
+if len(list1) < 5:
+    idx = 0
+    print("The list has less than five elements.", idx)
+else:
+    while idx < (len(list1)-1) and flag == 0:
+        if list1[idx] - list1[idx-1] != list1[idx+1] - list1[idx]:
+            flag = 1
+        idx += 1
+    if flag == 1:
+        print("The outlier value is at the index: ", idx)
+    else:
+        idx = -1
+        print("There is no outlier in the list.", idx)
