@@ -38,23 +38,41 @@
 
 # Assume that the following variable is already defined:
 # list1 = [5,8,11,13,17]
-list1 = [2,4,10]
-# You are required to use the above variables to find
-# the index of the first outlier in the list.
-# You may start your code from here to store the correct result in
-# the variable idx
-idx = 1
-flag = 0
-if len(list1) < 5:
-    idx = 0
-    print("The list has less than five elements.", idx)
-else:
-    while idx < (len(list1)-1) and flag == 0:
-        if list1[idx] - list1[idx-1] != list1[idx+1] - list1[idx]:
+# list1 = [2,4,10]
+
+# # You are required to use the above variables to find
+# # the index of the first outlier in the list.
+# # You may start your code from here to store the correct result in
+# # the variable idx
+# idx = 1
+# flag = 0
+# if len(list1) < 5:
+#     idx = 0
+#     print("The list has less than five elements.", idx)
+# else:
+#     while idx < (len(list1)-1) and flag == 0:
+#         if list1[idx] - list1[idx-1] != list1[idx+1] - list1[idx]:
+#             flag = 1
+#         idx += 1
+#     if flag == 1:
+#         print("The outlier value is at the index: ", idx)
+#     else:
+#         idx = -1
+#         print("There is no outlier in the list.", idx)
+
+def findString(string, list1):
+    flag = 0
+    i = 0
+    lp = len(list1)
+
+    while i < lp:
+        if list1[i] == string:
             flag = 1
-        idx += 1
-    if flag == 1:
-        print("The outlier value is at the index: ", idx)
-    else:
-        idx = -1
-        print("There is no outlier in the list.", idx)
+            print(string," is found at index", i)
+        i += 1
+    if flag == 0:
+        print(string, "is not found in the list")
+
+list1 = ['2','55','888','9','30','45']
+string = input("Enter a string: ")
+findString(string, list1)
