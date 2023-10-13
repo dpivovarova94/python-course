@@ -60,19 +60,35 @@
 #         idx = -1
 #         print("There is no outlier in the list.", idx)
 
-def findString(string, list1):
-    flag = 0
-    i = 0
-    lp = len(list1)
+# def findString(string, list1):
+#     flag = 0
+#     i = 0
+#     lp = len(list1)
 
-    while i < lp:
-        if list1[i] == string:
-            flag = 1
-            print(string," is found at index", i)
-        i += 1
-    if flag == 0:
-        print(string, "is not found in the list")
+#     while i < lp:
+#         if list1[i] == string:
+#             flag = 1
+#             print(string," is found at index", i)
+#         i += 1
+#     if flag == 0:
+#         print(string, "is not found in the list")
 
-list1 = ['2','55','888','9','30','45']
-string = input("Enter a string: ")
-findString(string, list1)
+# list1 = ['2','55','888','9','30','45']
+# string = input("Enter a string: ")
+# findString(string, list1)
+def fibo(n):
+    # generate a fibonacci sequence
+    if n in {0,1}:
+        return n
+    else:
+        return fibo(n - 1) + fibo(n - 2)
+    
+n = 10
+fib_list = [0] * n
+count = 0
+while count < n:
+    fib_list[count] = fibo(count)
+    count += 1
+
+print("First ", n, "terms of fiboncci sequence are: ")
+print(fib_list)

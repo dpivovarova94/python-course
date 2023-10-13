@@ -27,3 +27,16 @@ def findString(string, list1):
 list1 = ['2','55','888','9','30','45']
 string = input("Enter a string: ")
 findString(string, list1)
+
+# Write a function, fibo(), that receives the parameter n to specify the number of terms of the Fibonacci sequence. That function will return a list containing the sequence.
+def fibo(n):
+    # generate a fibonacci sequence
+    fib = [0]*n
+    if n in {0,1}:
+        fib[n] = n
+    else:
+        fib[n] = fibo(n - 1) + fibo(n - 2)
+
+n = 10
+print("First ", n, "terms of fiboncci sequence are: ")
+print(fibo(10))
