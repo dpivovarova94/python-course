@@ -76,19 +76,69 @@
 # list1 = ['2','55','888','9','30','45']
 # string = input("Enter a string: ")
 # findString(string, list1)
-def fibo(n):
-    # generate a fibonacci sequence
-    if n in {0,1}:
-        return n
-    else:
-        return fibo(n - 1) + fibo(n - 2)
+# def fibo(n):
+#     # generate a fibonacci sequence
+#     if n in {0,1}:
+#         return n
+#     else:
+#         return fibo(n - 1) + fibo(n - 2)
     
-n = 10
-fib_list = [0] * n
-count = 0
-while count < n:
-    fib_list[count] = fibo(count)
-    count += 1
+# n = 10
+# fib_list = [0] * n
+# count = 0
+# while count < n:
+#     fib_list[count] = fibo(count)
+#     count += 1
 
-print("First ", n, "terms of fiboncci sequence are: ")
-print(fib_list)
+# print("First ", n, "terms of fiboncci sequence are: ")
+# # print(fib_list)
+
+# # # print(sorted("aAbB"))
+# # # msg = 'good at work at night'
+# # # print(msg.find('at'))
+# # # print('a2H'.iss())
+# # # print("Hello".lower())
+def checkAnagrams(str1, str2):
+    num = 0
+    flag = 0
+    sum = 0
+
+    if len(str1) == len(str2):
+        # write code
+        str1 = str1.lower()
+        str2 = str2.lower()
+        i = 0
+
+        while i < len(str1):
+            # while flag != 1:
+            if str1[i] in list(str2):
+                flag = 0
+            else:
+                flag = 1
+            sum += flag
+            i += 1
+            # print(sum)
+        if sum == 0:
+            num = 1
+        else:
+            num = -1
+    else:
+        num = -1
+    return num
+
+print(checkAnagrams("accept", "expect"))
+print(checkAnagrams("Skin", "sink"))
+
+
+# str1 = "skin"
+# str2 = "sink"
+# i = 0
+
+# # while i < len(str1):
+# #     if str1[i] in str2.split():
+# #       print(str1[i])
+# #       print(str2.split())
+# #     i +=1
+
+# print(str1[1])
+# print(list(str2))

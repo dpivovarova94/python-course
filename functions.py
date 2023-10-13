@@ -31,12 +31,42 @@ findString(string, list1)
 # Write a function, fibo(), that receives the parameter n to specify the number of terms of the Fibonacci sequence. That function will return a list containing the sequence.
 def fibo(n):
     # generate a fibonacci sequence
-    fib = [0]*n
     if n in {0,1}:
-        fib[n] = n
+        return n
     else:
-        fib[n] = fibo(n - 1) + fibo(n - 2)
-
+        return fibo(n - 1) + fibo(n - 2)
+    
 n = 10
+fib_list = [0] * n
+count = 0
+while count < n:
+    fib_list[count] = fibo(count)
+    count += 1
+
 print("First ", n, "terms of fiboncci sequence are: ")
-print(fibo(10))
+print(fib_list)
+
+# Write a function that accepts two strings as parameters and checks whether these strings are anagrams of each other. An anagram is a text formed by rearranging the letters of another piece of text.
+def checkAnagrams(str1, str2):
+    num = 0
+    flag = 0
+
+    if len(str1) == len(str2):
+        # write code
+        str1 = str1.lower()
+        str2 = str2.lower()
+
+        for i in len(str1):
+            if str1[i] in str2:
+                flag = 0
+            else:
+                flag = 1
+        if flag == 0:
+            num = 1
+        else:
+            num = -1
+    else:
+        num = -1
+    return num
+
+print(checkAnagrams("silent", "Listen"))
